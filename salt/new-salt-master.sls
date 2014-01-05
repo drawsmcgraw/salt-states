@@ -1,15 +1,10 @@
-{% for package in 'salt-master','git','GitPython','vim' %}
-salt-master-install-{{package}}:
+install-salt-packages:
   pkg.installed:
-    - name: {{package}}
-{%endfor%}
-
-
-#upgrade-to-salt-17:
-#  cmd.script:
-#    - source: salt://salt/files/upgrade-salt-from-github.sh
-#    - wait:
-#      - pkg: salt-master
+    - names:
+      - salt-master
+      - git
+      - GitPython
+      - vim
 
 add-salt-vim-files:
   cmd.script:
