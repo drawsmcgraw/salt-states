@@ -4,7 +4,7 @@ install-salt-packages:
       - salt-master
       - git
       - GitPython
-      - vim
+      - vim-enhanced
 
 add-salt-vim-files:
   cmd.script:
