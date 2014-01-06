@@ -31,11 +31,11 @@ create-self-signed-cert:
   cmd.run:
     - name: salt-call --local tls.create_self_signed_cert
 
+# salt-api doesn't come with init scripts so just 
+# start it from the cli
 start-salt-api:
-  service:
+  cmd.run:
     - name: salt-api
-    - running
-    - enable: true
 
 disable-firewall:
   service:
