@@ -12,6 +12,6 @@ add-salt-vim-files:
 
 add-git-repos:
   file.managed:
-    - name: /etc/salt/master.d/add-git-repos.conf
-    - source: salt://salt/files/add-git-repos.conf
+    - name: /etc/salt/master.d/git-repos.conf
+    - source: salt://salt/files/git-repos.conf
     - mkdirs: True
